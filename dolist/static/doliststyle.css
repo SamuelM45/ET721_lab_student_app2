@@ -1,0 +1,56 @@
+*{box-sizing: border-box;}
+.maincontainer{
+    width: 800px;
+    background-color: aliceblue;
+    margin: 5em auto;
+    padding: 2em;
+}
+.apptitle{text-align: center;}
+.dolistform{margin-top: 2em;}
+.formgroup{margin-top: 2em;}
+.todo_text{padding: 0.5em; border-radius: 5px; border: solid gray 1px; width: 400px;}
+.btnadd, .btn_deleteeach, .btn_deleteall{
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+.btnadd{background-color: olive;width: 30%;}
+.btn_deleteall, .btn_deleteeach{
+    background-color: crimson;
+    width: 49%;
+}
+.btn_deleteall:hover, .btn_deleteeach:hover{
+    background-color: darkred;
+    font-weight: bolder;
+}
+.btnadd:hover{
+    background-color:darkred;
+    cursor: pointer;
+}
+/*TO DO LIST*/
+.listdo{ padding:0px; }
+.listitem{
+    padding: 20px;
+    background-color: rgb(230,230,230);
+    border-bottom: gray dashed 1px;
+    list-style: none;
+}
+.completed{
+    color: whitesmoke;
+    text-decoration: line-through;
+    background-color: rgb(50,50,50);
+}
+.linkitem{
+    text-decoration: none;
+    color: rgb(50,50,50);
+}
+.linkitem:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.trashicon{
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 10px;
+}

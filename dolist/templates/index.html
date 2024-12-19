@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11 by _____</title>
+    <link rel="stylesheet" href="{% static 'doliststyle.css' %}">
+</head>
+
+<body>
+    <main class="maincontainer">
+        <h1 class="apptitle">To do list by _____</h1>
+        <form class="dolistform" action="{% url 'add' %}" method="POST" role="form">
+            {% csrf_token %}
+            <section class="formgroup">
+                <label for="task">What to do?...</label>
+                {{ form.text.as_widget }}
+                <button class="btnadd">ADD TO LIST</button>
+            </section>
+        </form>
+
+        <section class="formgroup">
+            <a href="{% url 'deletecompleted' %}">
+                <button class="btn_deleteeach">
+                    <span class="trashicon">&#128465;</span>
+                    DELETE COMPLETED
+                </button>
+            </a>
+            <a href="{% url 'deleteall' %}">
+                <button class="btn_deleteall">
+                    <span class="trashicon">&#128465;</span>
+                    DELETE ALL
+                </button>
+            </a>
+        </section>
+
+        <section class="formgroup">
+            <h3>Added to list</h3>
+            <!-- LIST DISPLAY -->
+            <ul class="listdo">
+                {% for task in todo_tasks %}
+                    {% if task.completed %}
+                        <li class="listitem completed">{{ task.text }}</li>
+                    {% else %}
+                        <a href="{% url 'completed' task.id %}" class="linkitem">
+                            <li class="listitem">{{ task.text }}</li>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
