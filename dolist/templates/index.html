@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 11 by _____</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="{% static 'doliststyle.css' %}">
 </head>
 
 <body>
     <main class="maincontainer">
-        <h1 class="apptitle">To do list by _____</h1>
+        <h1 class="apptitle">To do list</h1>
         <form class="dolistform" action="{% url 'add' %}" method="POST" role="form">
             {% csrf_token %}
             <section class="formgroup">
@@ -51,6 +51,11 @@
                 {% endfor %}
             </ul>
         </section>
+
+        <section class="formgroup">
+            <a href="/"><button class="btnadd">Back to Home</button></a>
+        </section>
+        
     </main>
 </body>
 

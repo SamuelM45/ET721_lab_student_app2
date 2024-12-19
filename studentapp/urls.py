@@ -19,5 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('dolist.urls')), #'' blank parameter means link as homepage
+    path('', include('home.urls')),  # Home page as the central hub
+    path('dolist/', include('dolist.urls')),  # Namespace for the dolist app
 ]
+

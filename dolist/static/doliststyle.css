@@ -1,56 +1,134 @@
-*{box-sizing: border-box;}
-.maincontainer{
-    width: 800px;
-    background-color: aliceblue;
-    margin: 5em auto;
-    padding: 2em;
+/* General Styles */
+* {
+    box-sizing: border-box;
 }
-.apptitle{text-align: center;}
-.dolistform{margin-top: 2em;}
-.formgroup{margin-top: 2em;}
-.todo_text{padding: 0.5em; border-radius: 5px; border: solid gray 1px; width: 400px;}
-.btnadd, .btn_deleteeach, .btn_deleteall{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.maincontainer {
+    width: 90%;
+    max-width: 800px;
+    background-color: aliceblue;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.apptitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+.dolistform {
+    margin-top: 1.5em;
+}
+.formgroup {
+    margin-top: 1.5em;
+    text-align: center;
+}
+.todo_text {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: solid gray 1px;
+    width: 80%;
+    max-width: 400px;
+}
+.btnadd,
+.btn_deleteeach,
+.btn_deleteall {
     border: none;
     padding: 0.5em 2em;
     border-radius: 5px;
     color: whitesmoke;
+    font-size: 1rem;
+    margin-top: 0.5em;
 }
-.btnadd{background-color: olive;width: 30%;}
-.btn_deleteall, .btn_deleteeach{
+.btnadd {
+    background-color: olive;
+    width: 80%;
+    max-width: 250px;
+}
+.btn_deleteall,
+.btn_deleteeach {
     background-color: crimson;
-    width: 49%;
+    width: 48%;
 }
-.btn_deleteall:hover, .btn_deleteeach:hover{
+.btn_deleteall:hover,
+.btn_deleteeach:hover {
     background-color: darkred;
     font-weight: bolder;
 }
-.btnadd:hover{
-    background-color:darkred;
+.btnadd:hover {
+    background-color: darkred;
     cursor: pointer;
 }
-/*TO DO LIST*/
-.listdo{ padding:0px; }
-.listitem{
-    padding: 20px;
-    background-color: rgb(230,230,230);
+/* Back to Home Button */
+.btn_back_home {
+    background-color: teal;
+    padding: 0.8em 2.5em;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5em;
+    width: 50%;
+}
+.btn_back_home:hover {
+    background-color: darkcyan;
+    font-weight: bold;
+}
+
+/* To-Do List Styles */
+.listdo {
+    padding: 0;
+}
+.listitem {
+    padding: 1em;
+    background-color: rgb(230, 230, 230);
     border-bottom: gray dashed 1px;
     list-style: none;
 }
-.completed{
+.completed {
     color: whitesmoke;
     text-decoration: line-through;
-    background-color: rgb(50,50,50);
+    background-color: rgb(50, 50, 50);
 }
-.linkitem{
+.linkitem {
     text-decoration: none;
-    color: rgb(50,50,50);
+    color: rgb(50, 50, 50);
 }
-.linkitem:hover{
+.linkitem:hover {
     text-decoration: underline;
     font-weight: bolder;
 }
-.trashicon{
+.trashicon {
     font-size: 25px;
     display: inline-block;
     margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .maincontainer {
+        padding: 1em;
+    }
+    .apptitle {
+        font-size: 1.5rem;
+    }
+    .todo_text {
+        width: 90%;
+    }
+    .btnadd,
+    .btn_deleteeach,
+    .btn_deleteall {
+        font-size: 0.9rem;
+        padding: 0.5em 1.5em;
+    }
+    .btn_back_home {
+        width: 90%;
+        padding: 0.7em 2em;
+        font-size: 1rem;
+    }
 }
