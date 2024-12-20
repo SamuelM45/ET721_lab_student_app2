@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),  # Home page as the central hub
     path('dolist/', include('dolist.urls')),  # Namespace for the dolist app
-    path('post/', include('post.urls'))
+    path('post/', include('post.urls')),
+    path('blog/', include('blog.urls')),
 ]
 
 # serve media files during development.

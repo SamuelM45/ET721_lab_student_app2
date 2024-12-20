@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Blog{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Website Title -->
+        <h1>My Blog</h1>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="{% url 'post_list' %}">Home</a>
+            <a href="{% url 'post_create' %}">New Post</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

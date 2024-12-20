@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'dolist',
     'home',
     'post',
+    'blog',
 ]
 
 MIDDLEWARE = [
