@@ -1,35 +1,47 @@
-img{width: 100%;}
-*{box-sizing: border-box;}
-
-.maincontainer{
+/* General styles */
+img {
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+.maincontainer {
     width: 90%;
     margin: 5em auto;
     padding: 2em;
     border: solid lightblue 1px;
 }
-.upload_img_btn{
-    background-color:olive;
+
+/* Buttons */
+.upload_img_btn, .back_home_btn, .back_posthome_btn {
+    background-color: olive;
     padding: 0.5em 2em;
     border-radius: 5px;
-    color:white;
+    color: white;
     text-decoration: none;
+    display: inline-block;
+    margin: 0.5em 0;
 }
-.upload_img_btn:hover{
+.upload_img_btn:hover, .back_home_btn:hover, .back_posthome_btn:hover {
     background-color: crimson;
 }
-.albumcontainer{
+
+/* Album container */
+.albumcontainer {
     margin-top: 5em;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.card{
+
+/* Card styles */
+.card {
     width: 45%;
     padding: 2em;
     background-color: lightcyan;
     box-shadow: 1px 1px 5px lightgray;
 }
-.card-title{
+.card-title {
     text-align: center;
     font-family: Georgia;
 }
