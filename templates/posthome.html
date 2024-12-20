@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Images App</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+    </head>
+
+    <body>
+        <main class="maincontainer">
+            <section>
+                <nav><a href="{% url 'add_post' %}" class="upload_img_btn">Upload Images</a> </nav>
+            </section>
+            <section class="albumcontainer">
+                {% for post in object_list %}
+                <div class="card">
+                    <p class="card-title">{{post.title}}</p>
+                    <div class="card-img-container">
+                        <img class="card-img" src="{{post.image.url}}" alt="image of {{post.title}}">
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+        </main>
+    </body>
+</html>

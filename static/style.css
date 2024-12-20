@@ -1,0 +1,35 @@
+img{width: 100%;}
+*{box-sizing: border-box;}
+
+.maincontainer{
+    width: 90%;
+    margin: 5em auto;
+    padding: 2em;
+    border: solid lightblue 1px;
+}
+.upload_img_btn{
+    background-color:olive;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    color:white;
+    text-decoration: none;
+}
+.upload_img_btn:hover{
+    background-color: crimson;
+}
+.albumcontainer{
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    width: 45%;
+    padding: 2em;
+    background-color: lightcyan;
+    box-shadow: 1px 1px 5px lightgray;
+}
+.card-title{
+    text-align: center;
+    font-family: Georgia;
+}
