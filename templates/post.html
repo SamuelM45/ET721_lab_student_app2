@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload an image</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1 class="posttitle">Upload an image</h1>
-    <form method="post" enctype="multipart/form-data" class="form_post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btnsubmit">Submit new image post</button>
-    </form>
+    <div class="maincontainer">
+        <h1 class="posttitle">Upload an image</h1>
+        <form method="post" enctype="multipart/form-data" class="form_post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btnsubmit">Submit new image post</button>
+        </form>
+    </div>
 </body>
 </html>

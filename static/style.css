@@ -12,6 +12,7 @@ img {
     border: solid lightblue 1px;
 }
 
+
 /* Buttons */
 .upload_img_btn, .back_home_btn, .back_posthome_btn {
     background-color: olive;
@@ -44,4 +45,51 @@ img {
 .card-title {
     text-align: center;
     font-family: Georgia;
+}
+
+/* Form Styling */
+.form_post {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.form_post label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.form_post input, .form_post textarea, .form_post select {
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+/* Submit Button */
+.btnsubmit {
+    background-color: olive;
+    padding: 0.8em 2em;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btnsubmit:hover {
+    background-color: crimson;
+}
+
+/* Page Title */
+.posttitle {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 1.5em;
+    text-shadow: 1px 1px 2px lightgray;
 }
